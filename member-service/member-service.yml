@@ -1,5 +1,5 @@
 your.name: "eaton Default Modify!!!"
-member.service.id: "TTTTT"
+id: "TTTTT"
 spring:
   rabbitmq:
     host: localhost
