@@ -1,4 +1,4 @@
-your.name: "eaton Default Modify!!1616111!"
+your.name: "eaton Default Modify MemberConfig"
 spring:
   rabbitmq:
     host: localhost
