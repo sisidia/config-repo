@@ -1,4 +1,5 @@
 your.name: "eaton Default Modify EventConfig"
+event.service.id: "AAA"
 spring:
   rabbitmq:
     host: localhost
