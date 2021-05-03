@@ -1,0 +1,15 @@
+your.name: "eaton Dev"
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: '{cipher}d29b12c27b7e81464503b5047e7c2d9eca91ec85909d9b9c05c256c0847df4fe'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      ebabked: true  
