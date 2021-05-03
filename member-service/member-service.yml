@@ -1,5 +1,4 @@
 your.name: "eaton Default Modify!!!"
-id: "TTTTT"
 spring:
   rabbitmq:
     host: localhost
@@ -22,3 +21,6 @@ eureka:   ## 추가
   client:
     register-with-eureka: true    ## Eureka Server 에 서비스 등록
     fetch-registry: true          ## 레지스트리 정보를 로컬에 캐싱
+service:
+  id:
+    zuul: zuulserver
