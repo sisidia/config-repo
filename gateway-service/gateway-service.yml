@@ -43,9 +43,9 @@ spring:
 #              - RewritePath=/token/?(?<segment>.*), /$\{segment}
               - name: TokenFilter
                 args:
-                  baseMessage: Spring Cloud Gateway TokenFilter
+                  baseMessage: Spring Cloud Gateway TokenFilter111
                   preLogger: true
-                  postLogger: true
+                  postLogger: false
           - id: oauth-resource-service
             uri: lb://OAUTH-RESOURCE-SERVICE
             predicates:
@@ -54,28 +54,23 @@ spring:
 #              - RewritePath=/token/?(?<segment>.*), /$\{segment}
               - name: ResourceFilter
                 args:
-                  baseMessage: Spring Cloud Gateway TokenFilter
+                  baseMessage: Spring Cloud Gateway ResourceFilter
                   preLogger: true
                   postLogger: true
           - id: config-server
             uri: lb://CONFIG-SERVER
             predicates:
-              - Path=/config*/**
+              - Path=/config/**
             filters:
               - RewritePath=/config/?(?<segment>.*), /$\{segment}
-              - name: TokenFilter
+              - name: ConfigFilter
                 args:
-                  baseMessage: Spring Cloud Gateway CONFIGFilter
+                  baseMessage: Spring Cloud Gateway CONFIG Filter
                   preLogger: true
                   postLogger: true
     config:
       uri: http://localhost:8889  # Config Server 위치
 your.name: "aaaaaa"
-rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: '{cipher}d29b12c27b7e81464503b5047e7c2d9eca91ec85909d9b9c05c256c0847df4fe'
 management:
   health:
     redis:
