@@ -46,10 +46,21 @@ spring:
                   baseMessage: Spring Cloud Gateway TokenFilter
                   preLogger: true
                   postLogger: true
+          - id: oauth-resource-service
+            uri: lb://OAUTH-RESOURCE-SERVICE
+            predicates:
+              - Path=/v1/**
+            filters:
+#              - RewritePath=/token/?(?<segment>.*), /$\{segment}
+              - name: ResourceFilter
+                args:
+                  baseMessage: Spring Cloud Gateway TokenFilter
+                  preLogger: true
+                  postLogger: true
           - id: config-server
             uri: lb://CONFIG-SERVER
             predicates:
-              - Path=/config/**
+              - Path=/config*/**
             filters:
               - RewritePath=/config/?(?<segment>.*), /$\{segment}
               - name: TokenFilter
