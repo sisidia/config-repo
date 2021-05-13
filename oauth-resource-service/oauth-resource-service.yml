@@ -1,18 +1,17 @@
+your.name: "eaton Default Modify Resource!!!!!"
 spring:
-  rabbitmq:
+  application:
+    name: oauth-resource-service    # 서비스 ID (컨피그 클라이언트가 어떤 서비스를 조회하는지 매핑)
+  profiles:
+    active: default         # 서비스가 실행할 기본 프로파일
+  cloud:
+    config:
+      uri: http://localhost:8889  # Config Server 위치
+rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: '{cipher}d29b12c27b7e81464503b5047e7c2d9eca91ec85909d9b9c05c256c0847df4fe'
-  application:
-    name: oauth-resource-service    # 서비스 ID (컨피그 클라이언트가 어떤 서비스를 조회하는지 매핑)
-  profiles:
-    active: local         # 서비스가 실행할 기본 프로파일
-
-  cloud:
-    config:
-      uri: http://localhost:8889  # Config Server 위치
-your.name: "eaton Default Modify Resource!!!!!"
 management:
   endpoints:
     web:
