@@ -7,7 +7,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8889  # Config Server 위치
-your.name: "eaton Default Modify Resource1"
+your.name: "eaton Default Modify Resource1gggggg"
 management:
   endpoints:
     web:
