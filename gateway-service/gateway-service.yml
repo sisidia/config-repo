@@ -46,6 +46,17 @@ spring:
                   baseMessage: Spring Cloud Gateway TokenFilter
                   preLogger: true
                   postLogger: true
+          - id: oauth-resource-service
+            uri: lb://OAUTH-RESOURCE-SERVICE
+            predicates:
+              - Path=/v1/**
+            filters:
+#              - RewritePath=/token/?(?<segment>.*), /$\{segment}
+              - name: ResourceFilter
+                args:
+                  baseMessage: Spring Cloud Gateway TokenFilter
+                  preLogger: true
+                  postLogger: true
     config:
       uri: http://localhost:8889  # Config Server 위치
 management:
