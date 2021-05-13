@@ -1,3 +1,4 @@
+your.name: "GateWayaaa111"
 spring:
   application:
     name: gateway-service    # 서비스 ID (컨피그 클라이언트가 어떤 서비스를 조회하는지 매핑)
