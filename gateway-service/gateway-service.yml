@@ -71,6 +71,11 @@ spring:
     config:
       uri: http://localhost:8889  # Config Server 위치
 your.name: "aaaaaa"
+rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: '{cipher}d29b12c27b7e81464503b5047e7c2d9eca91ec85909d9b9c05c256c0847df4fe'
 management:
   health:
     redis:
