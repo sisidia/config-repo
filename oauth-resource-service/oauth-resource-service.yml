@@ -1,4 +1,4 @@
-your.name: "eaton Default Modify Resource!!gggggg!!!"
+your.name: "eaton Default Modify Resource!!!"
 spring:
   application:
     name: oauth-resource-service    # 서비스 ID (컨피그 클라이언트가 어떤 서비스를 조회하는지 매핑)
