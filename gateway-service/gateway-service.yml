@@ -45,7 +45,7 @@ spring:
                 args:
                   baseMessage: Spring Cloud Gateway TokenFilter111
                   preLogger: true
-                  postLogger: false
+                  postLogger: true
           - id: oauth-resource-service
             uri: lb://OAUTH-RESOURCE-SERVICE
             predicates:
